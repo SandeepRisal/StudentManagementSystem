@@ -37,7 +37,7 @@ public class LoginFormController extends HttpServlet {
         if(user!=null){
             session.setAttribute("firstName" , user.getFirstName());
             session.setAttribute("lastName" , user.getLastName());
-            resp.sendRedirect("/StudentInformationSystem/dashboard");
+            resp.sendRedirect("/StudentManagementSystem/dashboard");
         }else{
             req.setAttribute("error-message" , "Sorry this account is not registered");
             req.getRequestDispatcher("index.jsp").forward(req,resp);
