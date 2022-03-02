@@ -3,9 +3,9 @@
 <%@include file="fragments/header.jsp"%>
 
 <%--Authentication--%>
-<c:if test="${firstName==null}">
-    <c:redirect url="/login" />
-</c:if>
+<%--<c:if test="${firstName==null}">--%>
+<%--    <c:redirect url="/login" />--%>
+<%--</c:if>--%>
 
 <div class="wrapper">
     <nav class="side-nav">
@@ -46,34 +46,15 @@
                                     <th>Contact</th>
                                     <th>Email</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Liza Maharjan</td>
-                                    <td>Pulchowk</td>
-                                    <td>9889988998</td>
-                                    <td>liza@mail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Liza Maharjan</td>
-                                    <td>Pulchowk</td>
-                                    <td>9889988998</td>
-                                    <td>liza@mail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Liza Maharjan</td>
-                                    <td>Pulchowk</td>
-                                    <td>9889988998</td>
-                                    <td>liza@mail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Liza Maharjan</td>
-                                    <td>Pulchowk</td>
-                                    <td>9889988998</td>
-                                    <td>liza@mail.com</td>
-                                </tr>
+                                <c:forEach var="student" items="${students}">
+                                    <tr>
+                                        <td><c:out value="${student.student_id}"/></td>
+                                        <td><c:out value="${student.student_name}"/></td>
+                                        <td><c:out value="${student.student_address}"/></td>
+                                        <td><c:out value="${student.student_contact}"/></td>
+                                        <td><c:out value="${student.student_email}"/></td>
+                                    </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>

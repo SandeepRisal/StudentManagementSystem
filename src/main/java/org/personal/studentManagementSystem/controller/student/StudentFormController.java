@@ -11,6 +11,6 @@ import java.io.IOException;
 public class StudentFormController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/student/student-add-form").forward(req,resp);
+        req.getRequestDispatcher("/student/student-add-form.jsp").forward(req,resp);
     }
 }

@@ -1,9 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="fragments/header.jsp"%>
 
-<c:if test="${firstName!=null}">
-    <c:redirect url="/dashboard" />
-</c:if>
+<%--<c:if test="${firstName!=null}">--%>
+<%--    <c:redirect url="/dashboard" />--%>
+<%--</c:if>--%>
 <div class="login-body" style="background-image: linear-gradient(to right, #c7c5f4, #b2aeeb, #9e98e1, #8a81d7, #776bcc);">
     <div class="container">
         <div class="screen">
