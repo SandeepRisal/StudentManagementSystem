@@ -13,8 +13,8 @@
                 <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/logo.png" alt="Logo" class="img-fluid">
             </div>
             <li class="nav-item"><a href="${pageContext.request.contextPath}/dashboard"><i class="fas fa-tachometer-alt"></i><span class="menu-text">Dashboard</span></a></li>
-            <li class="nav-item active"><a href="${pageContext.request.contextPath}/students"><i class="fas fa-user"></i><span class="menu-text">Students</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Programme</span></a></li>
+            <li class="nav-item"><a href="${pageContext.request.contextPath}/students"><i class="fas fa-user"></i><span class="menu-text">Students</span></a></li>
+            <li class="nav-item active"><a href="${pageContext.request.contextPath}/programmes"><i class="fas fa-file-alt"></i><span class="menu-text">Programme</span></a></li>
             <li class="nav-item"><a href="${pageContext.request.contextPath}/courses"><i class="fas fa-play "></i><span class="menu-text">Courses</span></a></li>
         </ul>
     </nav>
@@ -31,7 +31,30 @@
             </div>
         </header>
         <section>
-            form
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="student-table">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="section-head">Programmes</h2>
+                        </div>
+                        <div class="card">
+                            <table class="table table-stripped">
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Programme</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>BSC. Hons(Computing)</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>

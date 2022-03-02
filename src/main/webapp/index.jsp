@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="components/header.jsp"%>
+<%@include file="fragments/header.jsp"%>
 
 <c:if test="${firstName!=null}">
     <c:redirect url="/dashboard" />
@@ -42,4 +42,4 @@
 
 
 
-<%@include file="components/footer.jsp"%>
+<%@include file="fragments/footer.jsp"%>
