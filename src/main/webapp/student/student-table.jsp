@@ -33,7 +33,7 @@
       <div class="student-table">
         <div class="d-flex justify-content-between align-items-center">
           <h2 class="section-head">Students</h2>
-          <a href="${pageContext.request.contextPath}/add" class="btn btn-primary-light">Add</a>
+          <a href="${pageContext.request.contextPath}/students/add" class="btn btn-primary-light">Add</a>
         </div>
         <div class="card">
           <table class="table table-stripped">
