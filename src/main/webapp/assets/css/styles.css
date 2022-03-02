@@ -25,6 +25,10 @@ a:hover {
     text-decoration: none;
 }
 
+.btn {
+    min-width: 120px;
+}
+
 .btn-info {
     color: #fff;
     background-color: #89beff !important;
@@ -417,16 +421,16 @@ section .card {
 }
 
 .programme-image::before {
-    bottom: -29px;
+    bottom: -42px;
     content: '';
-    height: 50px;
+    height: 89px;
     position: absolute;
-    right: -30px;
+    right: -40px;
     z-index: 9;
-    left: -30px;
+    left: -15px;
     background: #fff;
-    transform: rotate(-7deg);
-    -webkit-transform: rotate(-7deg);
+    transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
     transition: all 0.4s;
 }
 
@@ -456,4 +460,14 @@ section .card {
     color: #439A46;
     border: 0;
     font-weight: 500;
+}
+
+/* Forms */
+.form-head {
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.form label {
+    font-weight: 600;
 }

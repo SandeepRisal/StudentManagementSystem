@@ -31,7 +31,51 @@
             </div>
         </header>
         <section>
-            form
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <h3 class="form-head">Add Student</h3>
+                        <form class="form" action="add-student" method="post">
+                            <%-- for id--%>
+                            <input type="hidden" class="form-control" placeholder="Enter student's id">
+                            <%-- for id--%>
+                            <div class="mb-4">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter student's name">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" placeholder="Enter student's address">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Contact</label>
+                                <input type="text" class="form-control" placeholder="Enter student's contact">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="" placeholder="Enter student's email">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Bill Number</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>Select bill</option>
+                                    <option value="1">50000</option>
+                                    <option value="2">80000</option>
+                                </select>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label">Bill Status</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>Select bill Status</option>
+                                    <option value="1">Paid</option>
+                                    <option value="2">Unpaid</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary float-end">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>
