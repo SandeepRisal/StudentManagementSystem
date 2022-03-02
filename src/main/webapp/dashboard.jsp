@@ -1,10 +1,10 @@
 <%--<%@ page isELIgnored="false" %>--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="components/header.jsp"%>
+<%@include file="fragments/header.jsp"%>
 
-<c:if test="${firstName==null}">
-    <c:redirect url="/login" />
-</c:if>
+<%--<c:if test="${firstName==null}">--%>
+<%--    <c:redirect url="/login" />--%>
+<%--</c:if>--%>
 
 <div class="wrapper">
     <nav class="side-nav">
@@ -13,10 +13,9 @@
                 <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/logo.png" alt="Logo" class="img-fluid">
             </div>
             <li class="nav-item active"><a href="#"><i class="fas fa-tachometer-alt"></i><span class="menu-text">Dashboard</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-user"></i><span class="menu-text">Users</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Posts</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-play "></i><span class="menu-text">Media</span></a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-sign-out-alt"></i><span class="menu-text">exit</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fas fa-user"></i><span class="menu-text">Students</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fas fa-file-alt"></i><span class="menu-text">Programme</span></a></li>
+            <li class="nav-item"><a href="#"><i class="fas fa-play "></i><span class="menu-text">Courses</span></a></li>
         </ul>
     </nav>
     <div class="main">
@@ -39,66 +38,41 @@
                         <div class="card">
                             <table class="table table-stripped">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
-                                        <th>Contact</th>
-                                        <th>Email</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Liza Maharjan</td>
-                                        <td>Pulchowk</td>
-                                        <td>9889988998</td>
-                                        <td>liza@mail.com</td>
-                                        <td>
-                                            <div>
-                                                <a href="" class="btn btn-info">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Liza Maharjan</td>
-                                        <td>Pulchowk</td>
-                                        <td>9889988998</td>
-                                        <td>liza@mail.com</td>
-                                        <td>
-                                            <div>
-                                                <a href="" class="btn btn-info">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Liza Maharjan</td>
-                                        <td>Pulchowk</td>
-                                        <td>9889988998</td>
-                                        <td>liza@mail.com</td>
-                                        <td>
-                                            <div>
-                                                <a href="" class="btn btn-info">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Liza Maharjan</td>
-                                        <td>Pulchowk</td>
-                                        <td>9889988998</td>
-                                        <td>liza@mail.com</td>
-                                        <td>
-                                            <div>
-                                                <a href="" class="btn btn-info">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Liza Maharjan</td>
+                                    <td>Pulchowk</td>
+                                    <td>9889988998</td>
+                                    <td>liza@mail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Liza Maharjan</td>
+                                    <td>Pulchowk</td>
+                                    <td>9889988998</td>
+                                    <td>liza@mail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Liza Maharjan</td>
+                                    <td>Pulchowk</td>
+                                    <td>9889988998</td>
+                                    <td>liza@mail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Liza Maharjan</td>
+                                    <td>Pulchowk</td>
+                                    <td>9889988998</td>
+                                    <td>liza@mail.com</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -185,4 +159,4 @@
     </div>
 </div>
 
-<%@include file="components/footer.jsp"%>
+<%@include file="fragments/footer.jsp"%>
