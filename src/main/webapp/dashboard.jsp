@@ -2,9 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="fragments/header.jsp"%>
 
-<%--<c:if test="${firstName==null}">--%>
-<%--    <c:redirect url="/login" />--%>
-<%--</c:if>--%>
+<%--Authentication--%>
+<c:if test="${firstName==null}">
+    <c:redirect url="/login" />
+</c:if>
 
 <div class="wrapper">
     <nav class="side-nav">

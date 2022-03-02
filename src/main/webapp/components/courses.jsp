@@ -14,8 +14,8 @@
             </div>
             <li class="nav-item"><a href="${pageContext.request.contextPath}/dashboard"><i class="fas fa-tachometer-alt"></i><span class="menu-text">Dashboard</span></a></li>
             <li class="nav-item"><a href="${pageContext.request.contextPath}/students"><i class="fas fa-user"></i><span class="menu-text">Students</span></a></li>
-            <li class="nav-item active"><a href="${pageContext.request.contextPath}/programmes"><i class="fas fa-file-alt"></i><span class="menu-text">Programme</span></a></li>
-            <li class="nav-item"><a href="${pageContext.request.contextPath}/courses"><i class="fas fa-play "></i><span class="menu-text">Courses</span></a></li>
+            <li class="nav-item"><a href="${pageContext.request.contextPath}/programmes"><i class="fas fa-file-alt"></i><span class="menu-text">Programme</span></a></li>
+            <li class="nav-item active"><a href="${pageContext.request.contextPath}/courses"><i class="fas fa-play "></i><span class="menu-text">Courses</span></a></li>
         </ul>
     </nav>
     <div class="main">
@@ -35,20 +35,21 @@
                 <div class="col-md-8">
                     <div class="student-table">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h2 class="section-head">Programmes</h2>
+                            <h2 class="section-head">Courses</h2>
                         </div>
                         <div class="card">
                             <table class="table table-stripped">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Programme</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>BSC. Hons(Computing)</td>
-                                    </tr>
-
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Course Code</th>
+                                    <th>Course Name</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>CC305</td>
+                                    <td>Java Web Programming</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
