@@ -5,6 +5,32 @@
     font-family: Raleway, sans-serif;
 }
 
+body {
+    background-color: #f8f9fb;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #89beff !important;
+    border-color: #89beff;
+}
+
 <!--Login cSS -->
 body .login-body {
     background-image: linear-gradient(to right, #5d54a4, #655da9, #6c66ae, #746fb3, #7c78b8);
@@ -204,4 +230,216 @@ body .login-body {
     font-size: 45px;
     font-weight: 400;
     color: #5e56a3;
+}
+
+/*Sidemenu css*/
+.side-nav{
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+}
+
+.side-nav .nav-menu {
+    height: 100%;
+    list-style: none;
+    padding: 0 0 40px;
+    width: 250px;
+    background-color: #262835;
+}
+
+.side-nav .logo {
+    padding: 30px;
+}
+
+.side-nav .nav-item {
+    position: relative;
+    padding: 10px 20px;
+}
+.nav-item.active {
+    background-color: #f8f9fb;
+}
+.nav-item.active a {
+    color: #262835;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+}
+.menu-text {
+    padding: 0 20px;
+}
+.side-nav .nav-item.active::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 150%;
+    width: 20px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 20px 0 0 #f8f9fb;
+}
+.side-nav .nav-item.active::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 100%;
+    right: 0;
+    height: 150%;
+    width: 20px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -20px 0 0 #f8f9fb;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+    margin-left: 250px;
+}
+
+header {
+    background: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+}
+
+header .dropdown-toggle:hover {
+    background-color: transparent;
+}
+
+header .dropdown-toggle:active, header .dropdown-toggle:focus {
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+.dropdown-toggle span {
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #439A46;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: -15px;
+    margin-top: 6px;
+}
+
+.dropdown-toggle i {
+    height: 52px;
+    width: 52px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin: 0;
+    background-color: #439A46;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    padding: 50px;
+}
+
+.section-head {
+    padding: 13px 23px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline;
+    position: relative;
+    background-image: linear-gradient(102deg, #E8F5E9, #f8f9fb);
+}
+
+.section-head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background-color: #439A46;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+section .card {
+    border: 0;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.student-table tr:nth-child(odd) {
+    background-color: #f7f8fa;
+}
+
+.student-table th, .student-table td {
+    border: 0;
+    padding: 18px 30px;
+    font-size: 18px;
+}
+
+.programme {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.programme-info {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.programme-info ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.programme-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.programme-image::before {
+    bottom: -29px;
+    content: '';
+    height: 50px;
+    position: absolute;
+    right: -30px;
+    z-index: 9;
+    left: -30px;
+    background: #fff;
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    transition: all 0.4s;
+}
+
+.programme .programme-image img {
+    transition: 0.3s all ease-in-out;
+}
+
+.programme:hover .programme-image img {
+    transform: scale(1.2);
+    transition: 0.3s all ease-in-out;
+}
+
+.programme:hover .programme-image::before {
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
 }
