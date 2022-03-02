@@ -36,7 +36,7 @@
           <a href="${pageContext.request.contextPath}/students/add" class="btn btn-primary-light">Add</a>
         </div>
         <div class="card">
-          <table class="table table-stripped">
+          <table class="table table-stripped text-center">
             <tbody>
             <tr>
               <th>ID</th>
@@ -55,12 +55,14 @@
                 <td><c:out value="${student.student_email}"/></td>
                 <td>
                   <div>
+                    <a href=`${pageContext.request.contextPath}/id` class="btn btn-success">View</a>
                     <a href="" class="btn btn-info">Edit</a>
                     <a href="" class="btn btn-danger">Delete</a>
                   </div>
                 </td>
               </tr>
             </c:forEach>
+            <a href=`${pageContext.request.contextPath}/students/id` class="btn btn-success">View</a>
             </tbody>
           </table>
         </div>
