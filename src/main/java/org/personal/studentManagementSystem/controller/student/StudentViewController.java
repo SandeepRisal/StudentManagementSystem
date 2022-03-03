@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "StudentViewController", urlPatterns = {"/students/id"})
+@WebServlet(name = "StudentViewController", urlPatterns = {"/students/student"})
 public class StudentViewController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("student/student-detail.jsp").forward(req, resp);
+        req.getRequestDispatcher("/student/student-detail.jsp").forward(req, resp);
     }
 }

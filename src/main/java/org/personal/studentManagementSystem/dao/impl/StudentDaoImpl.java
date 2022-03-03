@@ -20,7 +20,7 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public int save(Student student) throws ClassNotFoundException, SQLException{
-        final String QUERY = "INSERT INTO student(student_name,student_address,student_contact,student_email,fee_status)";
+        final String QUERY = "INSERT INTO student (student_name,student_address,student_contact,student_email,bill_id) VALUE (?,?,?,?,1)";
         connection = ConnectionFactory.getConnection();
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, student.getStudent_name());
@@ -33,7 +33,7 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public int update(Student student) throws ClassNotFoundException, SQLException{
-        final String QUERY ="UPDATE student set student_name=?, student_address=?, student_contact=?, student_email=?, fee_status=? WHERE student_id=?";
+        final String QUERY ="UPDATE student set student_name=?, student_address=?, student_contact=?, student_email=? WHERE student_id=?";
         connection = ConnectionFactory.getConnection();
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, student.getStudent_name());

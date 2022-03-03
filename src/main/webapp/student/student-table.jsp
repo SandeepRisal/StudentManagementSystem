@@ -55,9 +55,9 @@
                 <td><c:out value="${student.student_email}"/></td>
                 <td>
                   <div>
-                    <a href=`${pageContext.request.contextPath}/id` class="btn btn-success">View</a>
-                    <a href="" class="btn btn-info">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                    <a href="${pageContext.request.contextPath}/students/student" class="btn btn-success">View</a>
+                    <a href="${pageContext.request.contextPath}/students/add?student_id=<c:out value="${student.student_id}"/>" class="btn btn-info">Edit</a>
+                    <a href="${pageContext.request.contextPath}/students?student_id=<c:out value="${student.student_id}"/>" class="btn btn-danger">Delete</a>
                   </div>
                 </td>
               </tr>

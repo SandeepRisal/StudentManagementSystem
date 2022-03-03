@@ -34,6 +34,23 @@ public class StudentController extends HttpServlet {
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }
-        req.getRequestDispatcher("student/student-table.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+//        int student_id = Integer.parseInt(req.getParameter("student_id"));
+        String student_name =req.getParameter("student_name");
+        String student_address = req.getParameter("student_address");
+        String student_contact = req.getParameter("student_contact");
+        String student_email = req.getParameter("student_email");
+
+        Student student = new Student(student_name, student_address,student_contact,student_email);
+
+        try{
+            System.out.println(student_name);
+            studentDao.save(student);
+        }catch(ClassNotFoundException | SQLException ex){
+            ex.printStackTrace();
+        }
     }
 }
