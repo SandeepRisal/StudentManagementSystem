@@ -13,14 +13,14 @@ public class Student {
 
     }
 
-    public Student(String student_name, String student_address, String student_contact, String student_email){
+    public Student(String student_name, String student_address, String student_contact, String student_email, int bill_id, boolean fee_status){
 //        this.student_id = student_id;
         this.student_name = student_name;
         this.student_address = student_address;
         this.student_contact = student_contact;
         this.student_email = student_email;
-//        this.bill_id = bill_id;
-//        this.fee_status = fee_status;
+        this.bill_id = bill_id;
+        this.fee_status = fee_status;
     }
 
     public int getStudent_id() { return student_id;}

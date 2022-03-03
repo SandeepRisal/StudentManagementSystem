@@ -1,6 +1,8 @@
 package org.personal.studentManagementSystem.controller.login;
 
+import org.personal.studentManagementSystem.dao.ProgrammeDao;
 import org.personal.studentManagementSystem.dao.StudentDao;
+import org.personal.studentManagementSystem.dao.impl.ProgrammeDaoImpl;
 import org.personal.studentManagementSystem.dao.impl.StudentDaoImpl;
 import org.personal.studentManagementSystem.model.Student;
 
@@ -16,12 +18,16 @@ import java.util.List;
 @WebServlet(name = "LoginSuccessController" , urlPatterns = {"/dashboard"})
 public class LoginSuccessController extends HttpServlet {
     private final StudentDao studentDao = new StudentDaoImpl();
+    private final ProgrammeDao programmeDao = new ProgrammeDaoImpl();
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try{
             List<Student> student = studentDao.findAll();
             req.setAttribute("students" , studentDao.findAll());
+            req.setAttribute("programmes" , programmeDao.findAll());
+
             req.getRequestDispatcher("/dashboard.jsp").forward(req,resp);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());

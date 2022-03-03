@@ -406,6 +406,12 @@ section .card {
     padding: 10px;
 }
 
+.programme-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
 .programme-info ul {
     list-style-type: none;
     padding: 0;

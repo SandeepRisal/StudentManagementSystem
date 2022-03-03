@@ -44,11 +44,25 @@
                                         <th>ID</th>
                                         <th>Programme</th>
                                     </tr>
+                                    <c:forEach var="programme" items="${programmes}">
                                     <tr>
-                                        <td>1</td>
-                                        <td>BSC. Hons(Computing)</td>
+                                        <td><c:out value="${programme.programme_id}"/></td>
+                                        <td>
+                                            <c:if test="${programme.programme_name == 'BIT'}">
+                                               BIT - BSC. Hons(Computing)
+                                            </c:if>
+                                            <c:if test="${programme.programme_name == 'BHM'}">
+                                               BHM - Bachelor's in Hotel Management
+                                            </c:if>
+                                            <c:if test="${programme.programme_name == 'BBA'}">
+                                               BBA - Bachelor's in Business Administration
+                                            </c:if>
+                                            <c:if test="${programme.programme_name == 'MBA'}">
+                                               MBA - Master's in Business Administration
+                                            </c:if>
+                                        </td>
                                     </tr>
-
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>

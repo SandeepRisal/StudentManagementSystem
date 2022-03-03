@@ -19,6 +19,7 @@ public class StudentFormController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String student_id =req.getParameter("student_id");
         try{
+
             if(student_id !=null){
                 Student student = studentDao.findOne(Integer.parseInt(student_id));
                 req.setAttribute("student" , student);

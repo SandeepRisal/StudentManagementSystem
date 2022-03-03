@@ -43,8 +43,12 @@ public class StudentController extends HttpServlet {
         String student_address = req.getParameter("student_address");
         String student_contact = req.getParameter("student_contact");
         String student_email = req.getParameter("student_email");
+        int bill_id = Integer.parseInt(req.getParameter("bill_id"));
+        boolean fee_status = req.getParameter("fee_status")=="true"?true:false;
+        System.out.println(req.getParameter("bill_id"));
+        System.out.println(req.getParameter("fee_status"));
 
-        Student student = new Student(student_name, student_address,student_contact,student_email);
+        Student student = new Student(student_name, student_address,student_contact,student_email, bill_id, fee_status);
 
         try{
             System.out.println(student_name);
