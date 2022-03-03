@@ -55,22 +55,22 @@
                                 <label class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="" placeholder="Enter student's email" name="student_email" value="${student.student_email}">
                             </div>
-<%--                            <div class="mb-4">--%>
-<%--                                <label class="form-label">Bill Number</label>--%>
-<%--                                <select class="form-select" aria-label="Default select example">--%>
-<%--                                    <option selected disabled>Select bill</option>--%>
-<%--                                    <option value="1">50000</option>--%>
-<%--                                    <option value="2">80000</option>--%>
-<%--                                </select>--%>
-<%--                            </div>--%>
-<%--                            <div class="mb-5">--%>
-<%--                                <label class="form-label">Bill Status</label>--%>
-<%--                                <select class="form-select" aria-label="Default select example">--%>
-<%--                                    <option selected disabled>Select bill Status</option>--%>
-<%--                                    <option value="1">Paid</option>--%>
-<%--                                    <option value="2">Unpaid</option>--%>
-<%--                                </select>--%>
-<%--                            </div>--%>
+                            <div class="mb-4">
+                                <label class="form-label">Bill Number</label>
+                                <select class="form-select" aria-label="Default select example" name="bill_id">
+                                    <option selected disabled>Select bill</option>
+                                    <option value="1">50000</option>
+                                    <option value="2">80000</option>
+                                </select>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label">Bill Status</label>
+                                <select class="form-select" aria-label="Default select example" name="fee_status">
+                                    <option selected disabled>Select bill Status</option>
+                                    <option value="true">Paid</option>
+                                    <option value="false">Unpaid</option>
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary float-end"><%=request.getAttribute("action")%></button>
                         </form>
                     </div>

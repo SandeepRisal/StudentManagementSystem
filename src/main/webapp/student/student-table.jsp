@@ -55,14 +55,13 @@
                 <td><c:out value="${student.student_email}"/></td>
                 <td>
                   <div>
-                    <a href="${pageContext.request.contextPath}/students/student" class="btn btn-success">View</a>
+                    <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>
                     <a href="${pageContext.request.contextPath}/students/add?student_id=<c:out value="${student.student_id}"/>" class="btn btn-info">Edit</a>
                     <a href="${pageContext.request.contextPath}/students?student_id=<c:out value="${student.student_id}"/>" class="btn btn-danger">Delete</a>
                   </div>
                 </td>
               </tr>
             </c:forEach>
-            <a href=`${pageContext.request.contextPath}/students/id` class="btn btn-success">View</a>
             </tbody>
           </table>
         </div>

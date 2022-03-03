@@ -20,27 +20,30 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public int save(Student student) throws ClassNotFoundException, SQLException{
-        final String QUERY = "INSERT INTO student (student_name,student_address,student_contact,student_email,bill_id) VALUE (?,?,?,?,1)";
+        final String QUERY = "INSERT INTO student (student_name,student_address,student_contact,student_email,bill_id,fee_status) VALUE (?,?,?,?,?,?)";
         connection = ConnectionFactory.getConnection();
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, student.getStudent_name());
         preparedStatement.setString(2, student.getStudent_address());
         preparedStatement.setString(3, student.getStudent_contact());
         preparedStatement.setString(4, student.getStudent_email());
-//fee status lai get method xaina iSget somthign xa
+        preparedStatement.setInt(5, student.getBill_id());
+        preparedStatement.setBoolean(6,student.isFee_status());
         return preparedStatement.executeUpdate();
     }
 
     @Override
     public int update(Student student) throws ClassNotFoundException, SQLException{
-        final String QUERY ="UPDATE student set student_name=?, student_address=?, student_contact=?, student_email=? WHERE student_id=?";
+        final String QUERY ="UPDATE student set student_name=?, student_address=?, student_contact=?, student_email=? , bill_id=?, fee_status=? WHERE student_id=?";
         connection = ConnectionFactory.getConnection();
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, student.getStudent_name());
         preparedStatement.setString(2, student.getStudent_address());
         preparedStatement.setString(3, student.getStudent_contact());
         preparedStatement.setString(4, student.getStudent_email());
-        preparedStatement.setInt(5, student.getStudent_id());
+        preparedStatement.setInt(5, student.getBill_id());
+        preparedStatement.setBoolean(6,student.isFee_status());
+        preparedStatement.setInt(7, student.getStudent_id());
         return preparedStatement.executeUpdate();
     }
 
