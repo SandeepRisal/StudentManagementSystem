@@ -44,11 +44,12 @@
                                         <th>ID</th>
                                         <th>Programme</th>
                                     </tr>
+                                    <c:forEach var="programme" items="${programmes}">
                                     <tr>
-                                        <td>1</td>
-                                        <td>BSC. Hons(Computing)</td>
+                                        <td><c:out value="${programme.programme_id}"/></td>
+                                        <td><c:out value="${programme.programme_name}"/></td>
                                     </tr>
-
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>

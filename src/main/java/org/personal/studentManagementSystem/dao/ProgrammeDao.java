@@ -1,0 +1,10 @@
+package org.personal.studentManagementSystem.dao;
+
+import org.personal.studentManagementSystem.model.Programme;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface ProgrammeDao {
+    List<Programme> findAll() throws ClassNotFoundException, SQLException;
+}

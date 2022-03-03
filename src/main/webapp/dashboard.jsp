@@ -71,70 +71,24 @@
             <div class="mt-5">
                 <h2 class="section-head mb-3">Programme</h2>
                 <div class="row mt-5">
-                    <div class="col-md-3">
-                        <div class="programme">
-                            <div class="programme-image">
-                                <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
-                            </div>
-                            <div class="programme-info">
-                                <h4>B.Sc. (Hons) Computing</h4>
-                                <div>
-                                    <ul class="d-flex justify-content-between align-items-center">
-                                        <li><i class="fa-regular fa-clock me-1"></i> 123 credit hours</li>
-                                        <li><i class="fas fa-book me-1"></i> 39 subjects</li>
-                                    </ul>
+                    <c:forEach var="progeamme" items="${programmes}">
+                        <div class="col-md-3">
+                            <div class="programme">
+                                <div class="programme-image">
+                                    <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
+                                </div>
+                                <div class="programme-info">
+                                    <h4><c:out value="${progeamme.programme_name}" /></h4>
+                                    <div>
+                                        <ul class="d-flex justify-content-between align-items-center">
+                                            <li><i class="fa-regular fa-clock me-1"></i> 123 credit hours</li>
+                                            <li><i class="fas fa-book me-1"></i> 39 subjects</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="programme">
-                            <div class="programme-image">
-                                <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
-                            </div>
-                            <div class="programme-info">
-                                <h4>B.Sc. (Hons) Computing</h4>
-                                <div>
-                                    <ul class="d-flex justify-content-between align-items-center">
-                                        <li><i class="fa-regular fa-clock me-1"></i> 123 credit hours</li>
-                                        <li><i class="fas fa-book me-1"></i> 39 subjects</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="programme">
-                            <div class="programme-image">
-                                <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
-                            </div>
-                            <div class="programme-info">
-                                <h4>B.Sc. (Hons) Computing</h4>
-                                <div>
-                                    <ul class="d-flex justify-content-between align-items-center">
-                                        <li><i class="fa-regular fa-clock me-1"></i> 123 credit hours</li>
-                                        <li><i class="fas fa-book me-1"></i> 39 subjects</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="programme">
-                            <div class="programme-image">
-                                <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
-                            </div>
-                            <div class="programme-info">
-                                <h4>B.Sc. (Hons) Computing</h4>
-                                <div>
-                                    <ul class="d-flex justify-content-between align-items-center">
-                                        <li><i class="fa-regular fa-clock me-1"></i> 123 credit hours</li>
-                                        <li><i class="fas fa-book me-1"></i> 39 subjects</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
             </div>
         </section>

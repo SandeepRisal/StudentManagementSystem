@@ -45,11 +45,13 @@
                                     <th>Course Code</th>
                                     <th>Course Name</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>CC305</td>
-                                    <td>Java Web Programming</td>
-                                </tr>
+                                    <c:forEach var="course" items="${courses}">
+                                        <tr>
+                                            <td><c:out value="${course.course_id}" /></td>
+                                            <td><c:out value="${course.course_code}" /></td>
+                                            <td><c:out value="${course.course_name}" /></td>
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>
