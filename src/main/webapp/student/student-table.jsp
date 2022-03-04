@@ -44,6 +44,7 @@
               <th>Address</th>
               <th>Contact</th>
               <th>Email</th>
+              <th>Fee Status</th>
               <th>Action</th>
             </tr>
             <c:forEach var="student" items="${students}">
@@ -53,6 +54,10 @@
                 <td><c:out value="${student.student_address}"/></td>
                 <td><c:out value="${student.student_contact}"/></td>
                 <td><c:out value="${student.student_email}"/></td>
+                <td>
+<%--                  <c:out value="${student.fee_status}"/>--%>
+                  <c:if test="${student.fee_status == false ? 'Unpaid' : 'Paid'}"></c:if>
+                </td>
                 <td>
                   <div>
                     <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>

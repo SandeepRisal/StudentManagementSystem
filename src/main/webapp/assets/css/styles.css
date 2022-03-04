@@ -410,6 +410,7 @@ section .card {
     font-size: 18px;
     font-weight: 700;
     margin-top: 10px;
+    height: 50px;
 }
 
 .programme-info ul {
@@ -454,6 +455,30 @@ section .card {
     -webkit-transform: rotate(-5deg);
 }
 
+@keyframes shadow-pulse
+{
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+    }
+}
+
+
+.programme-image span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #439a46;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 1px 14px;
+    animation: shadow-pulse 1s infinite;
+}
+
 .btn-primary-light {
     height: 48px;
     display: flex;
@@ -476,4 +501,32 @@ section .card {
 
 .form label {
     font-weight: 600;
+}
+
+.course-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.course-block span {
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #439a46;
+    color: white;
+    margin-right: 10px;
+}
+
+.course-block h5 {
+    font-size: 20px;
+}
+
+.course-block p {
+    font-weight: 600;
+    font-size: 14px;
 }

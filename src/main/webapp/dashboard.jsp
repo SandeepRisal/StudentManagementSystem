@@ -61,10 +61,17 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <h2 class="section-head">Programmes</h2>
+                    <h2 class="section-head">Courses</h2>
                     <div class="card">
-
-                        <div>asdasdadasdasd</div>
+                        <c:forEach var="course" items="${courses}">
+                            <div class="course-block">
+                                <span><i class="fa-regular fa-bookmark"></i></span>
+                                <div>
+                                    <h5><c:out value="${course.course_name}" /></h5>
+                                    <p><c:out value="${course.course_code}" /></p>
+                                </div>
+                            </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
@@ -76,6 +83,18 @@
                             <div class="programme">
                                 <div class="programme-image">
                                     <img src="https://iimscollege.edu.np/wp-content/uploads/2019/03/computing.jpg" alt="Programme" class="img-fluid">
+                                    <c:if test="${programme.programme_name == 'BIT'}">
+                                        <span>BIT</span>
+                                    </c:if>
+                                    <c:if test="${programme.programme_name == 'BHM'}">
+                                        <span>BHM</span>
+                                    </c:if>
+                                    <c:if test="${programme.programme_name == 'BBA'}">
+                                        <span>BBA</span>
+                                    </c:if>
+                                    <c:if test="${programme.programme_name == 'MBA'}">
+                                        <span>MBA</span>
+                                    </c:if>
                                 </div>
                                 <div class="programme-info">
                                     <c:if test="${programme.programme_name == 'BIT'}">
