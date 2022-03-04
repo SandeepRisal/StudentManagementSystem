@@ -35,26 +35,4 @@ public class StudentController extends HttpServlet {
             System.out.println(ex.getMessage());
         }
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-//        int student_id = Integer.parseInt(req.getParameter("student_id"));
-        String student_name =req.getParameter("student_name");
-        String student_address = req.getParameter("student_address");
-        String student_contact = req.getParameter("student_contact");
-        String student_email = req.getParameter("student_email");
-        int bill_id = Integer.parseInt(req.getParameter("bill_id"));
-        boolean fee_status = req.getParameter("fee_status")=="true"?true:false;
-        System.out.println(req.getParameter("bill_id"));
-        System.out.println(req.getParameter("fee_status"));
-
-        Student student = new Student(student_name, student_address,student_contact,student_email, bill_id, fee_status);
-
-        try{
-            System.out.println(student_name);
-            studentDao.save(student);
-        }catch(ClassNotFoundException | SQLException ex){
-            ex.printStackTrace();
-        }
-    }
 }

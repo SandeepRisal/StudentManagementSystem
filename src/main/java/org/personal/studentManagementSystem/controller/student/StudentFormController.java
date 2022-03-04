@@ -38,7 +38,6 @@ public class StudentFormController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String student_id =req.getParameter("student_id").trim();
-        System.out.println(student_id);
         int result;
         try{
             Student student = new Student();
@@ -46,11 +45,12 @@ public class StudentFormController extends HttpServlet {
             student.setStudent_address(req.getParameter("student_address"));
             student.setStudent_contact(req.getParameter("student_contact"));
             student.setStudent_email(req.getParameter("student_email"));
+            student.setBill_id(Integer.parseInt(req.getParameter("bill_id")));
+            student.setFee_status(Boolean.parseBoolean(req.getParameter("fee_status")));
 
             if(student_id.length()!=0){
                 student.setStudent_id(Integer.parseInt(student_id));
                 result = studentDao.update(student);
-                System.out.println(student_id);
             }else{
                 result = studentDao.save(student);
             }
