@@ -261,6 +261,9 @@ body .login-body {
 }
 .nav-item.active {
     background-color: #f8f9fb;
+    border-radius: 20px 0 0 20px;
+    max-width: 245px;
+    margin-left: auto;
 }
 .nav-item.active a {
     color: #262835;
