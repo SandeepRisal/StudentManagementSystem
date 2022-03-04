@@ -58,16 +58,14 @@
                             <div class="mb-4">
                                 <label class="form-label">Bill Number</label>
                                 <select class="form-select" aria-label="Default select example" name="bill_id">
-                                    <option selected disabled>Select bill</option>
-                                    <option value="1">50000</option>
+                                    <option value="1" selected>50000</option>
                                     <option value="2">80000</option>
                                 </select>
                             </div>
                             <div class="mb-5">
                                 <label class="form-label">Bill Status</label>
                                 <select class="form-select" aria-label="Default select example" name="fee_status">
-                                    <option selected disabled>Select bill Status</option>
-                                    <option value="true">Paid</option>
+                                    <option value="true" selected>Paid</option>
                                     <option value="false">Unpaid</option>
                                 </select>
                             </div>

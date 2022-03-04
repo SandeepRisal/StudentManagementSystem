@@ -55,8 +55,7 @@
                 <td><c:out value="${student.student_contact}"/></td>
                 <td><c:out value="${student.student_email}"/></td>
                 <td>
-<%--                  <c:out value="${student.fee_status}"/>--%>
-                  <c:if test="${student.fee_status == false ? 'Unpaid' : 'Paid'}"></c:if>
+                    <c:out value="${student.fee_status==true?'Paid':'Unpaid'}"/>
                 </td>
                 <td>
                   <div>
