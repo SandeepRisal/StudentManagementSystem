@@ -44,6 +44,7 @@ public class StudentDaoImpl implements StudentDao {
         preparedStatement.setInt(5, student.getBill_id());
         preparedStatement.setBoolean(6,student.isFee_status());
         preparedStatement.setInt(7, student.getStudent_id());
+
         return preparedStatement.executeUpdate();
     }
 
