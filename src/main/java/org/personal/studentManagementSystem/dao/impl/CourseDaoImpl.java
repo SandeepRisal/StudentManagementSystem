@@ -29,7 +29,7 @@ public class CourseDaoImpl implements CourseDao {
         while(resultSet.next()){
             Course course = new Course();
             course.setCourse_id(resultSet.getInt("course_id"));
-            course.setCourse_code(resultSet.getString("course_name"));
+            course.setCourse_code(resultSet.getString("course_code"));
             course.setCourse_name(resultSet.getString("course_name"));
             courses.add(course);
         }
