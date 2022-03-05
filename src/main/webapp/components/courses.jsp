@@ -2,9 +2,9 @@
 <%@include file="../fragments/header.jsp"%>
 
 <%--Authentication--%>
-<%--<c:if test="${firstName==null}">--%>
-<%--    <c:redirect url="/login" />--%>
-<%--</c:if>--%>
+<c:if test="${firstName==null}">
+    <c:redirect url="/login" />
+</c:if>
 
 <div class="wrapper">
     <nav class="side-nav">
