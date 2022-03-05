@@ -2,9 +2,9 @@
 <%@include file="../fragments/header.jsp"%>
 
 <%--Authentication--%>
-<%--<c:if test="${firstName==null}">--%>
-<%--    <c:redirect url="/login" />--%>
-<%--</c:if>--%>
+<c:if test="${firstName==null}">
+    <c:redirect url="/login" />
+</c:if>
 
 <div class="wrapper">
     <nav class="side-nav">
@@ -69,7 +69,8 @@
                                     <option value="false">Unpaid</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary float-end"><%=request.getAttribute("action")%></button>
+                            <a href="${pageContext.request.contextPath}/students" class="btn btn-secondary float-end d-flex align-items-center justify-content-center" style="border-radius: 10px; height: 48px">Cancel</a>
+                            <button type="submit" class="btn btn-success float-end me-3" style="border-radius: 10px; height: 48px"><%=request.getAttribute("action")%></button>
                         </form>
                     </div>
                 </div>

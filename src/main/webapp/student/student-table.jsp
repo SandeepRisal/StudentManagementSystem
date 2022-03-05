@@ -1,9 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../fragments/header.jsp"%>
 <%--Authentication--%>
-<%--<c:if test="${firstName==null}">--%>
-<%--    <c:redirect url="/login" />--%>
-<%--</c:if>--%>
+<c:if test="${firstName==null}">
+    <c:redirect url="/login" />
+</c:if>
 
 <div class="wrapper">
   <nav class="side-nav">
@@ -59,7 +59,7 @@
                 </td>
                 <td>
                   <div>
-                    <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>
+<%--                    <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>--%>
                     <a href="${pageContext.request.contextPath}/students/add?student_id=<c:out value="${student.student_id}"/>" class="btn btn-info">Edit</a>
                     <a href="${pageContext.request.contextPath}/students?student_id=<c:out value="${student.student_id}"/>" class="btn btn-danger">Delete</a>
                   </div>
