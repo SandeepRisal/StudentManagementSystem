@@ -59,7 +59,7 @@
                 </td>
                 <td>
                   <div>
-                    <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>
+<%--                    <a href="${pageContext.request.contextPath}/students/<c:out value="${student.student_id}"/>" class="btn btn-success">View</a>--%>
                     <a href="${pageContext.request.contextPath}/students/add?student_id=<c:out value="${student.student_id}"/>" class="btn btn-info">Edit</a>
                     <a href="${pageContext.request.contextPath}/students?student_id=<c:out value="${student.student_id}"/>" class="btn btn-danger">Delete</a>
                   </div>
